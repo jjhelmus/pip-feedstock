@@ -7,8 +7,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/p/pip/pip-{{ version }}.tar.gz
-  sha256: e5458a0b89f2755e0ee8c0c77613fe5273e05f337907874d64f13171a898a7ff
+  url: https://files.pythonhosted.org/packages/py3/p/pip/pip-{{ version }}-py3-none-any.whl
+  sha256: 7cd207eed4c60b0f411b444cd1464198fe186671c323b6cd6d433ed80fc9d247
 
 build:
   number: 0
@@ -21,8 +21,6 @@ build:
 requirements:
   host:
     - python
-    - setuptools >=67.6.1
-    - wheel
   run:
     - python
 

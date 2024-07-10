@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# use the pip source to install itself
-PYTHONPATH="./src" $PYTHON -m pip install . --no-deps --no-build-isolation -vv
+# use the pip wheel to install itself
+PYTHONPATH='./pip-${PKG_VERSION}-py3-none-any.whl' $PYTHON -m pip install --no-cache-dir --no-index --no-index --find-links . pip
 
 cd $PREFIX/bin
 rm -f pip2* pip3*
